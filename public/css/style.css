@@ -1,0 +1,378 @@
+html {
+	height: initial;
+	background: white;
+	background: -webkit-radial-gradient(circle, white, white, #ccc 120%); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, white, white, #ccc 120%); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, white, white, #ccc 120%); /* For Fx 3.6 to 15 */
+    background: radial-gradient(circle, white, white, #ccc 120%); /* Standard syntax (must be last) */
+}
+
+body{
+	background: url("http://i.imgur.com/tUipEz4.png") repeat center fixed;
+}
+
+ul {
+	list-style-type: none; 
+	margin-top: 18%;
+	margin-left: 2%; 
+	display: block;
+}
+
+li {
+	margin-bottom: 10%;
+}
+
+/*.st0{
+	fill: none;
+	stroke: #1A1A1A;
+	stroke-miterlimit: 10;
+}
+
+.st0:hover{
+	fill: #f1c40f;
+}*/
+
+.home{
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.home:hover{
+	background-image: url('../img/home-icon-02.svg');
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    width: 35%;
+    height: 35%;
+}
+
+.store{
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.store:hover{
+	background-image: url('../img/store-icon-02.svg');
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    width: 35%;
+    height: 35%;
+}
+
+/*.blog{
+	background-image: url('../img/blog-icon.svg');
+}*/
+
+.blog{
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.blog:hover{
+	background-image: url('../img/blog-icon-02.svg');
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    width: 35%;
+    height: 35%;
+}
+
+.contact{
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.contact:hover{
+	background-image: url('../img/contact-icon-02.svg');
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    width: 35%;
+    height: 35%;
+}
+
+a {
+	color: black;
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+a:hover {
+	color: #407033;
+	/*margin-left: 1%;*/
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.show{
+	display: none !important;
+	margin-left: 3%;
+	margin-bottom: 0 !important;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	font-size: 1.7em;
+	color: black;
+}
+
+li:hover .show{
+	display: inline-block !important;
+}
+
+#logo {
+	margin-top: 13%;
+}
+
+/*.secondaryBody {
+
+	position: relative;
+	display: block;
+	top: -500px;
+	left: 10%;
+}*/
+
+.secondaryBody h1{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 4em;
+	margin-bottom: 5%;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* STORE PAGE */
+
+/*.store{
+	position: absolute;
+	display: block;
+	left: 10%;
+}*/
+
+/*.product-row{
+	max-width: 100%;
+	position: relative;
+	display: block;
+	top: -500px;
+	left: 10%;
+}*/
+
+.theProduct {
+	text-align: center;
+	padding-top: 20px;
+	margin-bottom: 2%;
+	border-radius: 10px; 
+	color: #519640;
+}
+
+.theProduct h3,h4 {
+	color: #8d8e8d;
+}
+
+.theProduct h3 {
+	font-weight: 700;
+}
+
+.cartButton {
+	border: 2px #519640 solid;
+	background-color: white;
+	border-radius: 5px;
+	color: #519640;
+}
+
+.cartButton:hover {
+	background-color: #519640;
+	color: white;
+}
+
+/* ABOUT PAGE */
+
+.aboutBody {
+	display: block;
+	position: absolute;
+	width: 45%;
+	left: 10%;
+	top: -15%;
+}
+
+h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 4em;
+	margin-bottom: 5%;
+}
+
+.aboutBody p {
+	font-size: 2em;
+	line-height: 50px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#kutluPic{
+	display: block;
+	position: absolute;
+	left: 65%;
+	top: 2%;
+	border: 0px solid white;
+	border-radius: 50%; 
+}
+
+
+/* SOCIAL PAGE */
+
+@import "compass/css3";
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+article {
+ -moz-column-width: 13em;
+ -webkit-column-width: 13em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap: 1em; 
+  
+}
+
+section {
+ display: inline-block;
+ margin: 0.25rem;
+ padding: 1rem;
+ width: 100%; 
+ background: #C0392B;
+ border-radius: 5px;
+}
+
+section h3 {
+	color: #EBC56E;
+}
+
+section p {
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/* CONTACT PAGE */
+
+#contactBanner{
+	background-color: #2b2b2b;
+}
+
+#contactBanner h4 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 2em;
+	color: white;
+}
+
+#contactBanner p {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+#customerInput {
+	float: left;
+	width: 50%;
+	margin-top: 5%;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#firstName{
+	width: 45%;
+	float: left;
+	margin-right: 10%;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+#lastName {
+	width: 45%;
+	float: left;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+#email {
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+#comment {
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+.submit {
+	float: left;
+	background-color: #519640;
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+	border-radius: 5px;
+}
+
+.submit:hover {
+	background-color: #407033;
+}
+
+.submit:active {
+	background-color: #407033;
+}
+
+iframe {
+	float: right;
+	width: 45%;
+	margin-top: 5%;
+}
+
+/* LOGIN AND REGISTER PAGE */
+fieldset{
+	border: none;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.leForms {
+	background-color: white;
+	width: 30%;
+	border-radius: 10px;
+	box-shadow: 0px 2px 10px #888888;
+}
+
+/* MASTER PAGE */
+.masterBody {
+	width: 80%;
+	display: block;
+	position: absolute;
+	left: 10%;
+	top: -10%;
+}
+
+form {
+	margin-bottom: 5%; 
+}
+
+.activeProducts {
+	background-color: #E2E2E2;
+	margin-bottom: 2%;
+	box-shadow: 0px 2px 10px #888888;
+}
+
+.activeProducts h3 {
+	text-align: left;
+}
+
+.activeProducts h4 {
+	text-align: left;
+}
+
+.pull-right{
+	float: right;
+}

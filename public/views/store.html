@@ -1,0 +1,15 @@
+
+<div class="secondaryBody animated fadeInUp col-md-9">
+	<h1 class="animated fadeInUp">Store</h1>
+	<div class="row">
+		<div ng-repeat="product in items">
+			<div class="theProduct  col-md-4 columns animated fadeInUp">
+				<img src="http://i.imgur.com/oFTKznp.png" class="" alt="">
+				<h3>{{product.name}}</h3>
+				<h4>{{product.description}}</h4>
+				<h3>{{product.price | currency}}</h3>
+				<a href="#/chat"><button ng-show="product.canPurchase" class="cartButton">Make an offer</button></a>
+			</div>	
+		</div>
+	</div>
+</div>

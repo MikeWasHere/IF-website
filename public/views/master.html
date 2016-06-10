@@ -1,0 +1,68 @@
+<div ng-app="MainCtrl" ng-controller="MainController" class="masterBody">
+
+<div class="userinfo" ng-show="currentUser">
+	<a ng-href="#/login" class="pull-right" ng-click="logout()">Logout</a>
+    <span class="userinfo pull-right">Hi <b>{{ currentUser.firstname }} - </b></span>
+     <br>
+</div>
+
+<h1 ng-hide="edit">Add a product</h1>
+<form ng-submit="addProduct()" ng-hide="edit" class="addForm">
+	<input type="text" ng-model="product.name" placeholder="Title goes here" required>
+	<input type="text" ng-model="product.description" placeholder="Short Description" required>
+	<input type="text" ng-model="product.price" placeholder="Whats the price?" required>
+	<input type="text" ng-model="product.image" placeholder="Add image link">
+	<input type='checkbox' ng-model="product.canPurchase" ng-value="true" ng-show="edit" checked/>
+	<button type="submit" class="success">Add Product</button>
+</form>
+
+<h1 ng-show="edit">Edit a product</h1>
+<form ng-submit="editProduct(updateProduct)" ng-show="edit">
+	<input type="text" ng-model="updateProduct.name" >
+	<input type="text" ng-model="updateProduct.description" >
+	<input type="text" ng-model="updateProduct.price" >
+	<input type="text" ng-model="updateProduct.image" placeholder="place image link here">
+	<input type='checkbox' ng-model="product.canPurchase" ng-value="true" ng-show="edit" checked/>
+	<button type="submit" class="success">Update Production</button> 
+	<button ng-click="$parent.updateProduct=product; $parent.edit=false;" class="secondary button" ng-show="edit">Cancel</button>
+</form>
+
+<!-- <a href="" data-reveal-id="myModal">Click Me For A Modal</a>
+
+<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Awesome. I have it.</h2>
+  <p class="lead">Your couch.  It is mine.</p>
+  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div> -->
+
+<h1>Your active products</h1>
+<div ng-repeat="product in items" class="activeProducts row">
+	<img ng-src="{{product.image}}" alt="" class="large-3 columns" height="133">
+	<div class="large-6 columns">
+		<h3>{{product.name}}</h3>
+		<h4>{{product.description}}</h4>
+		<h3>{{product.price | currency}}</h3>
+	</div>
+
+	<div class="large-3 columns">
+		<button ng-click="$parent.updateProduct=product; $parent.edit=true;">Edit</button>
+		<button ng-click="removeProduct($index)" class="alert">Delete</button>
+	</div>
+
+</div>
+
+<!-- <form ng-submit="">
+	<div class='example-chat-toolbar'>
+	    <label for="nameInput">Username:</label>
+	    <input type='text' id='nameInput' ng-model='elUsername' placeholder='enter a username...'>
+	</div>
+
+	  <ul id='example-messages'  class="example-chat-messages"></ul>
+	 
+
+	  <footer>
+	    <input type='text' id='messageInput' ng-model='elMessage' placeholder='Type a message...'>
+	  </footer>
+	</div>
+</form> -->
