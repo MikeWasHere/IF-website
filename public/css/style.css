@@ -22,15 +22,9 @@ li {
 	margin-bottom: 10%;
 }
 
-/*.st0{
-	fill: none;
-	stroke: #1A1A1A;
-	stroke-miterlimit: 10;
+.center {
+	text-align: center;
 }
-
-.st0:hover{
-	fill: #f1c40f;
-}*/
 
 .home{
 	-webkit-transition: all .5s ease;
@@ -104,7 +98,8 @@ a {
 }
 
 a:hover {
-	color: #407033;
+	color: black;
+	cursor: pointer;
 	/*margin-left: 1%;*/
 	-webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -129,19 +124,15 @@ li:hover .show{
 	margin-top: 13%;
 }
 
-/*.secondaryBody {
-
-	position: relative;
-	display: block;
-	top: -500px;
-	left: 10%;
-}*/
-
 .secondaryBody h1{
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700;
 	font-size: 4em;
-	margin-bottom: 5%;
+	margin-bottom: 2%;
+}
+
+.secondaryBody p{
+	font-size: 1.7em;
 }
 
 img {
@@ -150,19 +141,23 @@ img {
 
 /* STORE PAGE */
 
-/*.store{
-	position: absolute;
-	display: block;
-	left: 10%;
-}*/
+.nav{
+	margin-top: 0;
+}
 
-/*.product-row{
-	max-width: 100%;
-	position: relative;
-	display: block;
-	top: -500px;
-	left: 10%;
-}*/
+.nav li {
+	margin-bottom: 2%;
+	margin-right: 0.5%;
+	border: 1px black solid;
+	border-radius: 6px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.2em;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background: black;
+	color: #f1c40f;
+}
 
 .theProduct {
 	text-align: center;
