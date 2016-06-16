@@ -1,15 +1,60 @@
 
 <div class="secondaryBody animated fadeInUp col-md-9">
-	<h1 class="animated fadeInUp">Store</h1>
+	<div class="center">
+		<h1 class="animated fadeInUp">Infinite STORE</h1>
+		<p>Here lives the ecentric clothing apparels from Infinite Fortunes.</p>
+	</div>
+
+	<div class="row">
+	<ul class="nav nav-pills col-md-6 col-md-offset-3">
+  		<li role="presentation"><a href="#">All</a></li>
+  		<li role="presentation" class="active"><a href="#">Featured</a></li>
+  		<li role="presentation"><a href="#">Shirts</a></li>
+  		<li role="presentation"><a href="#">Hats</a></li>
+  		<li role="presentation"><a href="#">Accessories</a></li>
+	</ul>
+	</div>
+
 	<div class="row">
 		<div ng-repeat="product in items">
-			<div class="theProduct  col-md-4 columns animated fadeInUp">
+			<div class="theProduct  col-md-3 columns animated fadeInUp">
 				<img src="http://i.imgur.com/oFTKznp.png" class="" alt="">
 				<h3>{{product.name}}</h3>
-				<h4>{{product.description}}</h4>
 				<h3>{{product.price | currency}}</h3>
-				<a href="#/chat"><button ng-show="product.canPurchase" class="cartButton">Make an offer</button></a>
+				<button ng-show="product.canPurchase" class="cartButton" type="button" data-toggle="modal" data-target="#myModal">Add to Cart</button>
 			</div>	
 		</div>
 	</div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Product Name</h4>
+      </div>
+      <div class="modal-body row">
+        <img src="http://i.imgur.com/oFTKznp.png" class="col-md-6" alt="">
+        <p>Short Description of product.</p>
+        <div class="dropdown">
+		  <select class="dropbtn">
+		  <div class="dropdown-content">
+		  	<option value="">Select Size</option>
+		    <option value="small">Small</option>
+		    <option value="medium">Medium</option>
+		    <option value="large">Large</option>
+		    <option value="xlarge" ="#">X-Large</option>
+		  </div>
+		  </select>
+		</div>
+        <h3>$24.95</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cartButton">Add to Cart</button>
+      </div>
+    </div>
+  </div>
 </div>
