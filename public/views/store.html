@@ -21,8 +21,40 @@
 				<img src="http://i.imgur.com/oFTKznp.png" class="" alt="">
 				<h3>{{product.name}}</h3>
 				<h3>{{product.price | currency}}</h3>
-				<a href="#/chat"><button ng-show="product.canPurchase" class="cartButton">Add to Cart</button></a>
+				<button ng-show="product.canPurchase" class="cartButton" type="button" data-toggle="modal" data-target="#myModal">Add to Cart</button>
 			</div>	
 		</div>
 	</div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Product Name</h4>
+      </div>
+      <div class="modal-body row">
+        <img src="http://i.imgur.com/oFTKznp.png" class="col-md-6" alt="">
+        <p>Short Description of product.</p>
+        <div class="dropdown">
+		  <select class="dropbtn">
+		  <div class="dropdown-content">
+		  	<option value="">Select Size</option>
+		    <option value="small">Small</option>
+		    <option value="medium">Medium</option>
+		    <option value="large">Large</option>
+		    <option value="xlarge" ="#">X-Large</option>
+		  </div>
+		  </select>
+		</div>
+        <h3>$24.95</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cartButton">Add to Cart</button>
+      </div>
+    </div>
+  </div>
 </div>
