@@ -13,9 +13,14 @@ body{
 
 ul {
 	list-style-type: none; 
-	margin-top: 18%;
-	margin-left: 2%; 
+	margin-left: 1%; 
 	display: block;
+}
+
+ul>img{
+	width: 80%;
+	margin-top: 7%;
+	margin-bottom: 50%;
 }
 
 li {
@@ -120,10 +125,6 @@ li:hover .show{
 	display: inline-block !important;
 }
 
-#logo {
-	margin-top: 13%;
-}
-
 .secondaryBody h1{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700;
@@ -147,6 +148,70 @@ li:hover .show{
 
 img {
 	max-width: 100%;
+}
+
+/* HOME PAGE */
+#bruce {
+	margin-top: 8%;;
+}
+
+.secondRow {
+	margin-top: 5%;
+}
+
+.borders {
+	width: 46.1%;
+	border: 5px black solid;
+	border-radius: 5px;
+	height: 260px;
+}
+
+.borders>h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	text-align: center;
+}
+
+.left-border{
+	margin-right: 5%;
+}
+
+.sub-btn {
+	margin-top: 3%;
+	font-size: 2em !important;
+	text-transform: uppercase;
+}
+
+.email{
+	margin-top: 3%;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 2em;
+	font-weight: 400;
+	text-align: center;
+}
+
+#slides_control > div{
+  height: 260px;
+  padding: 0 !important;
+}
+
+slide>img{
+  margin:auto;
+  width: 100%;
+}
+
+#slides_control {
+  width: 100%;
+}
+
+/*CHOICE PAGE*/
+
+.choice {
+	padding: 10% 0;
+}
+
+a>h1 {
+	text-align: center;
 }
 
 /* STORE PAGE */
