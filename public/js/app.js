@@ -54,6 +54,11 @@ var myApp = angular.module('sampleApp', ['ngRoute', 'firebase', 'MainCtrl', 'Ner
 			controller: 'NerdController'	
 		})
 
+		.when('/blog-post', {
+			templateUrl: 'views/blog-post.html',
+			controller: 'NerdController'	
+		})
+
 		.when('/contact', {
 			templateUrl: 'views/contact.html',
 			controller: 'NerdController'	

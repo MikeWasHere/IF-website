@@ -25,24 +25,25 @@ ul>img{
 
 li {
 	margin-bottom: 10%;
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 .center {
 	text-align: center;
 }
 
+/********** SIDE NAV **********/ 
 .home{
 	-webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     transition: all .5s ease;
 }
 
-.home:hover{
+li:hover .home{
 	background-image: url('../img/home-icon-02.svg');
-	-webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    transition: all .5s ease;
-    width: 35%;
+	width: 35%;
     height: 35%;
 }
 
@@ -52,18 +53,11 @@ li {
     transition: all .5s ease;
 }
 
-.store:hover{
+li:hover .store{
 	background-image: url('../img/store-icon-02.svg');
-	-webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    transition: all .5s ease;
-    width: 35%;
+	width: 35%;
     height: 35%;
 }
-
-/*.blog{
-	background-image: url('../img/blog-icon.svg');
-}*/
 
 .blog{
 	-webkit-transition: all .5s ease;
@@ -71,12 +65,9 @@ li {
     transition: all .5s ease;
 }
 
-.blog:hover{
+li:hover .blog{
 	background-image: url('../img/blog-icon-02.svg');
-	-webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    transition: all .5s ease;
-    width: 35%;
+	width: 35%;
     height: 35%;
 }
 
@@ -86,14 +77,12 @@ li {
     transition: all .5s ease;
 }
 
-.contact:hover{
+li:hover .contact{
 	background-image: url('../img/contact-icon-02.svg');
-	-webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    transition: all .5s ease;
     width: 35%;
     height: 35%;
 }
+/********** SIDE NAV END **********/ 
 
 a {
 	color: black;
@@ -105,10 +94,6 @@ a {
 a:hover {
 	color: black;
 	cursor: pointer;
-	/*margin-left: 1%;*/
-	-webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    transition: all .5s ease;
 }
 
 .show{
@@ -345,34 +330,131 @@ h1 {
 
 /* SOCIAL PAGE */
 
-@import "compass/css3";
-
-*, *:before, *:after {box-sizing:  border-box !important;}
-
-article {
- -moz-column-width: 13em;
- -webkit-column-width: 13em;
- -moz-column-gap: 1em;
- -webkit-column-gap: 1em; 
-  
+.blog-container {
+	margin-top: 5px;
 }
 
-section {
- display: inline-block;
- margin: 0.25rem;
- padding: 1rem;
- width: 100%; 
- background: #C0392B;
- border-radius: 5px;
+.row>a>section {
+	padding: 0 0 0 4px;
+	border-radius: 7px;
+	margin: 5px; 
+	position: relative;
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
-section h3 {
-	color: #EBC56E;
+.row>a>section:hover {
+	margin-top: -5px;
+	margin-bottom: 15px;
+	box-shadow: 0px 5px 30px #888888;
 }
 
-section p {
+.sec-row {
+	margin-top: 10px;
+}
+
+.big-blog:hover .overlay-big {
+	opacity: 1;
+}
+
+.small-blog:hover .overlay-small {
+	opacity: 1;
+}
+
+.overlay-big{ 
+	opacity: 0;
+	position: relative;
+	bottom: 227px;
+	left: 0px;
+	border-radius: 7px;
+	z-index: 99;
+	width: 100%;
 	color: white;
-	font-family: 'Open Sans Condensed', sans-serif;
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.overlay-small{ 
+	opacity: 0;
+	position: relative;
+	bottom: 127px;
+	left: 0px;
+	border-radius: 7px;
+	z-index: 99;
+	width: 100%;
+	color: white;
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.row>section>img {
+	position: relative;
+}
+
+.big-blog {
+	height: 227px;
+}
+
+.big-blog>img {
+	max-width: 60%;
+	height: 227px;
+	float: right;
+}
+
+.big-blog>div {
+	text-align: center;
+	width: 36%;
+	font-size: .8em;
+}
+
+.big-blog>div>h3 {
+	font-size: 1.7em;
+}
+
+.small-blog {
+	height: 227px;
+	padding-left: 0 !important;
+}
+
+.small-blog>img {
+	width: 100%;
+	height: 127px;
+}
+
+.small-blog>div {
+	text-align: center;
+	width: 100%;
+	font-size: .8em;
+	padding: 5px;
+}
+
+.small-blog>div>h3 {
+	margin-top: 0;
+	font-size: 1.7em;
+}
+
+.small-blog-text {
+	position: relative;
+	bottom: 120px;
+}
+
+.event {
+	background-color: #f1c40f;
+}
+
+.clothes {
+	background-color: #2980b9;
+}
+
+.news {
+	background-color: #c0392b;
+}
+
+.artist {
+	background-color: #9b59b6;
 }
 
 /* CONTACT PAGE */
