@@ -723,6 +723,23 @@ fieldset>input {
 	background-color: #1657BF !important;
 }
 
+.delete-btn {
+	background-color: #FF2E27 !important;
+	color: white;
+}
+
+.delete-btn:hover {
+	background-color: #B5211C !important;
+}
+
+.crud-btn-container {
+	margin-right: 5px;
+}
+
+.crud-btn-container>.update-btn {
+	margin-right: 10px;
+}
+
 form {
 	margin-bottom: 2%; 
 }

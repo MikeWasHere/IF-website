@@ -35,19 +35,20 @@
 </div> -->
 
 <h1>Your active products</h1>
-<div ng-repeat="product in items" class="activeProducts row">
-	<img ng-src="{{product.image}}" alt="" class="large-3 columns" height="133">
-	<div class="large-6 columns">
-		<h3>{{product.name}}</h3>
-		<h4>{{product.description}}</h4>
-		<h3>{{product.price | currency}}</h3>
-	</div>
+<div class="row">
+	<div class="col-md-4 activeProducts" ng-repeat="product in items" >
+		<img ng-src="{{product.image}}" alt="" class="large-3 columns" height="133">
+		<div>
+			<h3>{{product.name}}</h3>
+			<h4>{{product.description}}</h4>
+			<h3>{{product.price | currency}}</h3>
+		</div>
 
-	<div class="large-3 columns">
-		<button ng-click="$parent.updateProduct=product; $parent.edit=true;" class="crud-buttons">Edit</button>
-		<button ng-click="removeProduct($index)" class="alert crud-buttons">Delete</button>
+		<div class="large-3 columns crud-btn-container">
+			<button ng-click="removeProduct($index)" class="alert crud-buttons delete-btn">Delete</button>
+			<button ng-click="$parent.updateProduct=product; $parent.edit=true;" class="crud-buttons update-btn">Edit</button>
+		</div>
 	</div>
-
 </div>
 
 <!-- <form ng-submit="">
