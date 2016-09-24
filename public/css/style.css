@@ -744,9 +744,14 @@ form {
 	margin-bottom: 2%; 
 }
 
+.activeProductsContainer {
+	width: 90%;
+	margin: 1% auto;
+}
+
 .activeProducts {
 	background-color: #E2E2E2;
-	margin-bottom: 2%;
+	margin: 2% 2%;
 	box-shadow: 0px 2px 10px #888888;
 }
 
