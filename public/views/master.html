@@ -35,8 +35,8 @@
 </div> -->
 
 <h1>Your active products</h1>
-<div class="row">
-	<div class="col-md-4 activeProducts" ng-repeat="product in items" >
+<div class="row activeProductsContainer">
+	<div class="col-md-3 activeProducts" ng-repeat="product in items" >
 		<img ng-src="{{product.image}}" alt="" class="large-3 columns" height="133">
 		<div>
 			<h3>{{product.name}}</h3>
