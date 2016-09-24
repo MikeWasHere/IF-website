@@ -1,11 +1,10 @@
-<div class="secondaryBody animated fadeInUp">
+<div class="secondaryBody animated fadeInUp col-md-9 login-container">
 
-  <h1>Register</h1>
-
-  <form name="loginForm" class="leForms" ng-submit="register()">
+  <form name="loginForm" class="leForms col-md-4 col-md-offset-3" ng-submit="register()">
   <p class="message" ng-show="message">{{ message }}</p>
     <div class="row">
       <div class="medium-12 columns">
+        <img src="http://i.imgur.com/CX66aZS.png" alt="Infinite Fortunes logo" class="col-md-8 col-md-offset-2">
         <fieldset>
           <input type="text" name="firstname" placeholder="First Name" ng-model="user.firstname" ng-required="true">
           <p class="error validationerror" ng-show="loginForm.firstname.$invalid && loginForm.firstname.$touched">First name required</p>
@@ -26,7 +25,7 @@
       
       
       <button class="submit" type="submit" ng-disabled="loginForm.$invalid">Submit</button>
-      <a href="#/login" style="float:right">Login</a>
+      <p style="float:left">Already a Memeber? <a href="#/login">Login</a></p>
       </div>
     </div>
   </form>

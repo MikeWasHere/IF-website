@@ -1,6 +1,7 @@
-var myApp = angular.module('sampleApp', ['ngRoute', 'firebase', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'AuthService', 'LoginCtrl'])
+var myApp = angular.module('sampleApp', ['ngRoute', 'firebase', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'AuthService', 'LoginCtrl', 'ui.bootstrap'])
 	.constant('FIREBASE_URL', 'https://offerup-clone.firebaseio.com/');
 
+	//Error Handling
 	myApp.run(['$rootScope', '$location',
 		function($rootScope, $location) {
 			$rootScope.$on('$routeChangeError', 
@@ -12,6 +13,7 @@ var myApp = angular.module('sampleApp', ['ngRoute', 'firebase', 'MainCtrl', 'Ner
 				}); //event info
 		}]); //run
 
+	//Front end route controllers
 	myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
@@ -20,6 +22,11 @@ var myApp = angular.module('sampleApp', ['ngRoute', 'firebase', 'MainCtrl', 'Ner
 		.when('/', {
 			templateUrl: 'views/home.html',
 			controller: 'MainController'
+		})
+
+		.when('/choice', {
+			templateUrl: 'views/choice.html',
+			controller: 'GeekController'
 		})
 
 		.when('/store', {
@@ -44,6 +51,11 @@ var myApp = angular.module('sampleApp', ['ngRoute', 'firebase', 'MainCtrl', 'Ner
 
 		.when('/blog', {
 			templateUrl: 'views/social.html',
+			controller: 'NerdController'	
+		})
+
+		.when('/blog-post', {
+			templateUrl: 'views/blog-post.html',
 			controller: 'NerdController'	
 		})
 

@@ -33,4 +33,21 @@ angular.module('MainCtrl', ['firebase']).controller('MainController', function($
         });
       };	
 
+    //Carousel Code
+      $scope.myInterval = 3000;
+      $scope.slides = [
+          {
+            image: 'http://i.imgur.com/CHLgrWF.jpg'
+          },
+          {
+            image: 'http://i.imgur.com/CHLgrWF.jpg'
+          },
+          {
+            image: 'http://i.imgur.com/CHLgrWF.jpg'
+          },
+          {
+            image: 'http://i.imgur.com/CHLgrWF.jpg'
+          }
+      ];
+
 });
